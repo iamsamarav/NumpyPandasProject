@@ -6,7 +6,7 @@ print(data)
 print(type(data))
 print(data.shape) # Tamanho do array
 
-data = np.arange(15)
+data01 = np.arange(15)
 
 print(data)
 
@@ -66,5 +66,11 @@ print(data.max())
 
 #Consulta dentro de um intervalo
 
-print(data[:5])
-print(data[])
+print(data01[:5])
+print(data01[3:])
+print(data01[4:8])
+print(data01[::2])
+print(data01[3::])
+
+#Modificando valores
+
