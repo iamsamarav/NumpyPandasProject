@@ -74,3 +74,11 @@ print(data01[3::])
 
 #Modificando valores
 
+data01[0] = 10
+print(data01)
+
+#Conversão de array para float
+
+data2 = np.array([1, 2, -3, 0], dtype='float')
+print(data2)
+print(type(data2))
