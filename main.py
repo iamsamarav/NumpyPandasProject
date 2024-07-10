@@ -4,7 +4,7 @@ data = np.array([2, 4, 6, 8, 10])
 
 print(data)
 print(type(data))
-print(data.shape) # Tamanho do array
+
 
 data01 = np.arange(15)
 
@@ -13,7 +13,7 @@ print(data)
 data = np.random.rand(15) # Números float aleatórios entre 0 e 1
 print(data)
 
-data = np.random.randint(15, size = 10) # Números int aleatórios
+data = np.random.randint(15, size=10) # Números int aleatórios
 print(data)
 
 data = np.random.random([2,2])
@@ -82,3 +82,22 @@ print(data01)
 data2 = np.array([1, 2, -3, 0], dtype='float')
 print(data2)
 print(type(data2))
+
+#Array com números igualmente distribuídos
+
+data12 = np.linspace(0,1,3)
+print(data12)
+
+#Redefinindo o formato de uma array
+
+data = np.arange(8)
+print(data)
+data = data.reshape(2,4)
+print(data)
+
+#Operadores lógicos
+
+data7 = np.arange(10)
+print(data7)
+print(data7 < 3)
+print(data7[1] < 3)
