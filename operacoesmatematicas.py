@@ -47,3 +47,7 @@ a3 = a.transpose()
 print(a3)
 print(a3.shape)
 
+#Salvando no disco local
+
+data = np.array([3,5,7,9])
+np.save('minha_array', data)
