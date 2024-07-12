@@ -25,4 +25,25 @@ print(data11)
 data12 = np.arange(0,30,3)+3
 print(data12)
 
-#Soma de arrays
+#operações entre arrays
+
+a1 = np.array([1,2,3,4])
+a2 = np.array([4,3,2,1])
+
+print(a1+a2)
+print(a1-a2)
+print(a1*a2)
+print(a1/a2)
+
+#Operadores lógicos entre arrays
+
+print(a1 > a2)
+
+#Transposição
+
+a = np.random.random([3,2])
+print(a)
+a3 = a.transpose()
+print(a3)
+print(a3.shape)
+
