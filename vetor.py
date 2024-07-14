@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class Vetor:
     def __init__(self, tamanho):
         self.tamanho = tamanho
@@ -14,14 +15,14 @@ class Vetor:
                 print(i, self.elementos[i])
 
     def insere_elemento(self, elemento):
-        if self.ultimo == self.tamanho -1:
+        if self.ultimo == self.tamanho - 1:
             print('Capacidade máxima atingida')
         else:
             self.ultimo += 1
             self.elementos[self.ultimo] = elemento
 
     def pesquisa_elemento(self, elemento):
-        for i in range(self.ultimo+1):
+        for i in range(self.ultimo + 1):
             if self.elementos[i] == elemento:
                 return i
         return -1
@@ -31,6 +32,18 @@ class Vetor:
         if posicao == -1:
             return -1
         else:
-            for i in range(posicao,self.ultimo):
-                self.elementos[i] = self.elementos[i+1]
+            for i in range(posicao, self.ultimo):
+                self.elementos[i] = self.elementos[i + 1]
                 self.ultimo -= 1
+
+
+base = Vetor(10)
+base.exibe_em_tela()
+base.insere_elemento(9)
+base.insere_elemento(3)
+base.insere_elemento(5)
+base.exibe_em_tela()
+print(base.pesquisa_elemento(9))
+print(base.ultimo)
+base.exclui_elemento(9)
+base.exibe_em_tela()
