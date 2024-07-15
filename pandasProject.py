@@ -45,3 +45,18 @@ print(data4)
 nomes_mod = np.array(nomes)
 data5 = pd.Series(data = nomes_mod)
 print(data5)
+
+#Qualquer estrutura em uma Serie
+
+funcoes = [input, print]
+data6 = pd.Series(data = funcoes)
+
+print(data6)
+
+#Integrando funções com Series
+
+paises = ['Argentina', 'Brasil', 'Canadá', 'Estados Unidos', 'Itália', 'México']
+data7 = pd.Series(data = paises,
+                  index = np.arange(0,6))
+
+print(data7)
