@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 #Estrutura de Series
 
@@ -39,4 +40,8 @@ data4 = pd.Series(data = nomes,
 
 print(data4)
 
+# Array Numpy em uma Serie
 
+nomes_mod = np.array(nomes)
+data5 = pd.Series(data = nomes_mod)
+print(data5)
