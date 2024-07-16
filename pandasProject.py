@@ -1,4 +1,4 @@
-import pandas as pd
+
 import numpy as np
 
 #Estrutura de Series
@@ -60,3 +60,14 @@ data7 = pd.Series(data = paises,
                   index = np.arange(0,6))
 
 print(data7)
+
+#Tamanho de uma Serie
+
+print(data.index)
+print(data7.index)
+
+#Série de um dicionário
+import pandas as pd
+dicionario = {'Nome': 'Fernando', 'Idade': 33, 'Altura': 1.90}
+serie_dicio = pd.Series(dicionario)
+print(serie_dicio)
