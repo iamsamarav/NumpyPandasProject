@@ -88,3 +88,13 @@ data = pd.DataFrame(base)
 print(data)
 print(data.info())
 print(data.describe())
+
+data = pd.DataFrame(data = np.random.randn(6,5),
+                    index= [1,2,3,4,5,6],
+                    columns= ['a', 'b', 'c', 'd', 'e'])
+print(data)
+print(data.columns)
+print(data.index)
+print(data['c'])
+print(type(data['c']))
+print(data.d)
