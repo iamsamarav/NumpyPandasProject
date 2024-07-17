@@ -1,4 +1,4 @@
-
+import pandas as pd
 import numpy as np
 
 #Estrutura de Series
@@ -67,7 +67,24 @@ print(data.index)
 print(data7.index)
 
 #Série de um dicionário
-import pandas as pd
+
 dicionario = {'Nome': 'Fernando', 'Idade': 33, 'Altura': 1.90}
 serie_dicio = pd.Series(dicionario)
 print(serie_dicio)
+
+#Unindo elementos de duas Series
+
+nomes2 = ['Ana', 'Alberto', 'Maria', 'Paulo', 'Tania']
+nomes1 = ['Ana', 'Carlos', 'Betina', 'Maria', 'Rafael']
+data_1 = pd.Series([1,2,3,4,5], index = nomes1)
+data_2 = pd.Series([1,2,3,4,5], index = nomes2)
+
+data_3 = data_1 + data_2
+print(data_3)
+
+#Criando um DataFrame
+
+data = pd.DataFrame(base)
+print(data)
+print(data.info())
+print(data.describe())
