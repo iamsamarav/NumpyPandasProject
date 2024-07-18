@@ -98,3 +98,21 @@ print(data.index)
 print(data['c'])
 print(type(data['c']))
 print(data.d)
+
+#Extração de + de 1 coluna
+
+print(data[['a', 'e']])
+data['f'] = data['d'] + data['e']
+print(data)
+
+#Removendo colunas manualmente
+
+data = data.drop('f', axis = 1)
+print(data)
+
+#Em arquivos ipynb
+
+#data = data.drop('a', axis=1, inplace=True)
+
+del data['b']
+print(data)
