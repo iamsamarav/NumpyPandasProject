@@ -116,3 +116,16 @@ print(data)
 
 del data['b']
 print(data)
+
+#Ordenar uma coluna
+
+dataf = pd.DataFrame(data= np.random.randn(6,5),
+                     index= [1,2,3,4,5,6],
+                     columns= ['a', 'b', 'c', 'd', 'e'])
+print(dataf)
+dataf.sort_values(by = 'b', inplace=True)
+print(dataf)
+
+#Extraindo dados de uma linha específica
+
+print(dataf.loc[3])
