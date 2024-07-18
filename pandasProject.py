@@ -129,3 +129,10 @@ print(dataf)
 #Extraindo dados de uma linha específica
 
 print(dataf.loc[3])
+print(dataf.loc[2,'b']) #elemento específico
+print(dataf.loc[[2,3], ['a','b','c']]) #um intervalo
+print(dataf.iloc[1:3,0:3]) #um intervalo
+
+#Buscando elementos via condição
+
+print(dataf > 0)
