@@ -136,3 +136,24 @@ print(dataf.iloc[1:3,0:3]) #um intervalo
 #Buscando elementos via condição
 
 print(dataf > 0)
+
+#Operações Matemáticas
+
+data = pd.DataFrame(data = np.random.randn(6,5),
+                    index = [1,2,3,4,5,6],
+                    columns= ['a', 'b', 'c', 'd', 'e'])
+
+print(data)
+print(data['b'].sum())
+print(data.sum()) #Retorna em série
+
+data = data + 1
+print(data)
+
+#Funções matemáticas personalizadas
+
+def soma(x):
+    return x + x
+
+print(data['b'].apply(soma))
+
