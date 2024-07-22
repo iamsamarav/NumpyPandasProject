@@ -171,3 +171,19 @@ print(data['d'].apply(lambda x: x ** 2))
 
 data2 = data[data['d'] > 0]
 print(data2)
+print(data[data['d'] > 0]['e']) #Aqui também altera de forma permanente
+
+#Condicionais compostas
+
+print(data[(data['a'] > 0) & (data['e'] < 0)]) #Operador and
+print(data[(data['a'] > 0) | (data['b'] < 0)]) #Operador or
+
+#Atualizando um DataFrame de acordo com uma condicional
+
+data_positivos = data > 0
+data = data[data_positivos]
+
+print(data)
+
+
+
