@@ -157,3 +157,17 @@ def soma(x):
 
 print(data['b'].apply(soma))
 
+def ao_quadrado(num):
+    return num ** 2
+
+print(data['a'].apply(ao_quadrado))
+print(data.iloc[0:1, 1:2].apply(ao_quadrado))
+
+#Expressão lambda
+
+print(data['d'].apply(lambda x: x ** 2))
+
+#Estruturas condicionais
+
+data2 = data[data['d'] > 0]
+print(data2)
