@@ -203,4 +203,16 @@ print(newData)
 newData = newData.set_index('idV')
 print(newData)
 
+#Índices multinível
 
+indice1 = ['A1', 'A1', 'A1', 'A2', 'A2', 'A2']
+indice2 = [1,2,3,1,2,3]
+
+indice3 = list(zip(indice1, indice2))
+indice3 = pd.MultiIndex.from_tuples(indice3)
+
+print(indice3)
+
+datamulti = pd.DataFrame(data = np.random.randn(6,2),
+                         index = indice3)
+print(datamulti)
