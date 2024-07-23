@@ -185,5 +185,22 @@ data = data[data_positivos]
 
 print(data)
 
+#Indexação de DataFrames
+
+newData = pd.DataFrame(data = np.random.randn(6,5),
+                       index = [1,2,3,4,5,6],
+                       columns= ['a', 'b', 'c', 'd', 'e'])
+
+print(newData)
+newData = newData.reset_index()
+print(newData)
+
+coluna_V ='V1 V2 V3 V4 V5 V6'.split()
+print(type(coluna_V))
+newData['idV'] = coluna_V
+print(newData)
+
+newData = newData.set_index('idV')
+print(newData)
 
 
