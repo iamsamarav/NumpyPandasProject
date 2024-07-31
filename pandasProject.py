@@ -208,11 +208,28 @@ print(newData)
 indice1 = ['A1', 'A1', 'A1', 'A2', 'A2', 'A2']
 indice2 = [1,2,3,1,2,3]
 
-indice3 = list(zip(indice1, indice2))
-indice3 = pd.MultiIndex.from_tuples(indice3)
+etapa3 = list(zip(indice1, indice2))
+multindice = pd.MultiIndex.from_tuples(etapa3)
 
-print(indice3)
+print(etapa3)
 
 datamulti = pd.DataFrame(data = np.random.randn(6,2),
-                         index = indice3)
+                         index = multindice)
 print(datamulti)
+print(datamulti.loc['A1'].loc[1])
+print(datamulti.xs('A1'))
+
+#Índice Multinível mais legível
+
+indice3 = ['Nível1', 'Nível1', 'Nível2', 'Nível2']
+indice4 = ['SubNível1', 'SubNível2', 'SubNível1', 'SubNível2']
+
+indice5 = list(zip(indice3, indice4))
+indice6 = pd.MultiIndex.from_tuples(indice5)
+
+multidata = pd.DataFrame(data = np.random.randn(4,2),
+                         index= indice6,
+                         columns=['Coluna1', 'Coluna2'])
+
+multidata.index.names = ['NIVEIS', 'SUBNIVEIS']
+print(multidata)
