@@ -233,3 +233,13 @@ multidata = pd.DataFrame(data = np.random.randn(4,2),
 
 multidata.index.names = ['NIVEIS', 'SUBNIVEIS']
 print(multidata)
+
+#Outro método de inserção de indice multinível
+
+multidata.pivot_table(values= 'Coluna1', index=['Coluna2'], columns=['Coluna1'])
+print(multidata)
+
+#Importando dados
+
+datacsv = pd.read_csv('C:/Users/samar/Downloads/archive (5)/Student_performance_data _.csv')
+print(datacsv)
