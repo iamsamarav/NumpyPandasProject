@@ -243,3 +243,30 @@ print(multidata)
 
 datacsv = pd.read_csv('C:/Users/samar/Downloads/archive (5)/Student_performance_data _.csv')
 print(datacsv)
+
+#Base de dados ausentes
+
+datausente = {'Cidades': ['Porto Alegre', 'Curitiba', np.nan],
+              'Estados': ['Paraná', np.nan, 'São Paulo'],
+              'Paises': ['Brasil', np.nan, np.nan]}
+
+datausente = pd.DataFrame(datausente)
+
+print(datausente)
+
+datausente = datausente.dropna(thresh= 2)
+print(datausente)
+
+notas = {'1° Semestre': [8.2, 8.0, np.nan],
+         '2° Semestre': [7.7, np.nan, 8.0],
+         '3° Semestre': [7.9, np.nan, np.nan]}
+
+notas = pd.DataFrame(notas)
+print(notas)
+
+notas['1° Semestre'].fillna(value = notas['1° Semestre'].mean())
+notas['2° Semestre'].fillna(value = notas['2° Semestre'].mean())
+notas['3° Semestre'].fillna(value = notas['3° Semestre'].mean())
+
+print(notas)
+
