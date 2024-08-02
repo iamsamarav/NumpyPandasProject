@@ -270,3 +270,17 @@ notas['3° Semestre'].fillna(value = notas['3° Semestre'].mean())
 
 print(notas)
 
+#Replicação do dado antecessor
+
+notas2 = {'1° Semestre': [8.2, 8.0, np.nan],
+         '2° Semestre': [7.7, np.nan, 8.0],
+         '3° Semestre': [7.9, np.nan, np.nan]}
+
+notas2 = pd.DataFrame(notas2)
+
+print(notas2)
+
+notas2 = notas2.fillna(method= 'ffill')
+print(notas2)
+
+print(notas2.isnull())
