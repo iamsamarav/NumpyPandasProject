@@ -284,3 +284,17 @@ notas2 = notas2.fillna(method= 'ffill')
 print(notas2)
 
 print(notas2.isnull())
+
+Age = datacsv.groupby('Age')
+print(Age.count())
+
+#Alterando o formato de um DataFrame
+
+notas3 = notas2.melt()
+print(notas3)
+
+#Concatenando DataFrames
+
+notas4 = pd.concat([notas, notas2], axis=1)
+print(notas4)
+
