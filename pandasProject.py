@@ -298,3 +298,23 @@ print(notas3)
 notas4 = pd.concat([notas, notas2], axis=1)
 print(notas4)
 
+#Mesclando dados de 2 DataFrames
+
+mergenotas = pd.merge(notas2, notas, how='inner', on='1° Semestre')
+print(mergenotas)
+print(notas)
+print(notas2)
+
+#Agregando dados de um Data a outro
+
+datajoin = notas3.join(notas)
+print(datajoin)
+
+#Elementos únicos
+
+print(notas['1° Semestre'].unique())
+print(notas['1° Semestre'].nunique())
+
+#Contagem
+
+print(datacsv['Age'].value_counts())
