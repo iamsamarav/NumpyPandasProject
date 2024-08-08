@@ -102,5 +102,3 @@ print(data7)
 print(data7 < 3)
 print(data7[1] < 3)
 
-#Teste do vetor
-
